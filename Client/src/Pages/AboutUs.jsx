@@ -20,7 +20,7 @@ const AboutUs = () => {
             />
           </div>
           <div className="items-center justify-center bg-[#ae8d60a2] pt-5 pb-5 rounded-lg p-4">
-            <div className="items-center justify-center bg-[#ae8d6087] pt-10 pb-5 rounded-lg p-4">
+            <div className="items-center justify-center  pt-10 pb-5 rounded-lg p-4">
               <h2 className="text-3xl text-slate-900 text-center  font-semibold">
                 Welcome to Organic Goods
               </h2>
@@ -34,9 +34,9 @@ const AboutUs = () => {
 
               {/* OUR STORY */}
               <div className=" rounded-lg p-4 pb-6 mt-10">
-                <h1 className="text-4xl font-medium text-center underline  text-black p-2">
+                {/* <h1 className="text-4xl font-medium text-center underline  text-black p-2">
                   Our Story!
-                </h1>
+                </h1> */}
                 <h2 className="text-start font-medium text-black mt-4 mb-2 text-2xl">
                   Why We Started Organic Goods?
                 </h2>
