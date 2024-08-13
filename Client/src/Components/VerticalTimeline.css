@@ -15,7 +15,6 @@
 .timeline {
   position: relative;
   padding: 10px 0;
-  background: url("path/to/your/image.jpg") no-repeat center center;
   background-size: cover; /* Ensure the image covers the entire container */
   border-radius: 10px; /* Optional: Add rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
