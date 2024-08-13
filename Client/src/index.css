@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@200..800&family=Merienda:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*>*{
+  font-family: 'Poppins';
+}
+
+body{
+  background: whitesmoke;
+  background-image: url('./bg.png');
+  background-size: cover;
+  background-position: center; /* Centers the image */
+  background-attachment: fixed; /* Keeps the background image fixed during scrolling */
+  background-repeat: no-repeat;
+  background-position-y: 90px;
+}
+
+.glass{
+  background: rgba(245, 222, 179, 0.589);
+  border-radius: 24px;
+  box-shadow: 0 4px 30px #4747470b;
+  backdrop-filter: blur(5.1px);
+  border: 3px solid rgb(222, 180, 102);
+  @apply  shrink-0 h-2/4  pt-10 pb-1 px-7 items-center justify-center flex sm:w-4/5 w-full  ;
+  
+}
+
+.glassS{
+  background: rgba(245, 222, 179, 0.172);
+  border-radius: 24px;
+  box-shadow: 0 4px 30px #4747470b;
+  backdrop-filter: blur(5.1px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  @apply  shrink-0 h-2/4  pt-14 pb-4  md:w-[95%] w-[100%] flex items-center justify-center rounded-lg ;
+  
+}
+
+.glassA{
+  
+  border-radius: 24px;
+  box-shadow: 0 4px 30px #4747470b;
+  backdrop-filter: blur(5.1px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  @apply  shrink-0 h-2/4  pt-10   md:w-[95%] w-[100%] items-center justify-center flex rounded-lg ;
+  
+}
+
+.committ{
+  border-radius: 24px;
+
+}
+
+.navBg{
+  background: rgb(255,172,0);
+  background: linear-gradient(90deg, rgba(255,172,0,1) 10%, rgba(237,163,9,1) 26%, rgba(253,174,10,1) 50%, rgba(194,136,15,1) 93%);
+
+}
+
+.btn{
+  background: rgb(255,172,0);
+background: linear-gradient(90deg, rgba(255,172,0,1) 10%, rgba(253,174,10,1) 50%, rgba(194,136,15,1) 93%);
+}
+
+ .outfit {
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
+
+}
+
+
+.merienda {
+  font-family: "BioRhyme", serif;
+  font-optical-sizing: auto;
+  
+  
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #bd8f06; /* Button text color */
+  background-color: rgba(0, 0, 0, 0.5); /* Button background color */
+  border-radius: 50%; /* Round buttons */
+  width: 60px; /* Adjust width for better fit */
+  height: 60px; /* Adjust height for better fit */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px; /* Icon size */
+  font-weight: 900;
+  z-index: 10; /* Ensure buttons are above other content */
+}
+.swiper-button-next::after, .swiper-button-prev::after{
+  font-size: 20px;
+}
+
+.swiper-button-next {
+  right: 10px; 
+  
+  /* Position from the right */
+}
+
+.swiper-button-prev {
+  left: 10px; /* Position from the left */
+}
+
+.tlback{
+background-image: url("./grass2.png");
+background-size: cover;
+background-position: center; /* Centers the image */
+background-attachment: fixed; /* Keeps the background image fixed during scrolling */
+background-repeat: no-repeat;
+background-position-y: 90px;
+
+
+}
+
+.lake{
+  background-image: url("./lake2.png");
+  background-size: cover;
+  background-position: center; /* Centers the image */
+  background-attachment: fixed; /* Keeps the background image fixed during scrolling */
+  background-repeat: no-repeat;
+  background-position-y: 90px; 
+  }
+  .about{
+    background-image: url("./about.png");
+    background-size: cover;
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the background image fixed during scrolling */
+    background-repeat: no-repeat;
+    background-position-y: 90px;
+    
+    
+    }
+    .our{
+      background-image: url("./our.png");
+      background-size: cover;
+      background-position: center; /* Centers the image */
+      background-attachment: fixed; /* Keeps the background image fixed during scrolling */
+      background-repeat: no-repeat;
+      background-position-y: 90px;
+      @apply backdrop-blur-md ;
+      
+      
+      }
+      .getb{
+        background-image: url("./conb.png");
+        background-size: cover;
+        background-position: center; /* Centers the image */
+        background-attachment: fixed; /* Keeps the background image fixed during scrolling */
+        background-repeat: no-repeat;
+       
+        
+        
+        
+        }
+
+
+  .gcontact{
+    background: rgba(224, 223, 220, 0.35);
+    border-radius: 24px;
+    box-shadow: 0 4px 30px #4747470b;
+    backdrop-filter: blur(5.1px);
+    border: 3px solid rgb(222, 180, 102);
+    @apply  shrink-0 h-2/4  pt-10 pb-1 px-7 justify-center items-center flex sm:w-4/5 w-full  ;
+    
+  }
+
+  .get{  
+    border-radius: 24px;
+    box-shadow: 0 4px 30px #4747470b;
+    backdrop-filter: blur(5.1px);
+    border: 3px solid rgb(222, 180, 102);
+    @apply  shrink-0 h-2/4  pt-10 pb-1 px-7 justify-center items-center flex  w-full  ;
+    
+  }
+
+
+  .gfooter{
+    background: rgba(192, 130, 14, 0.589);
+   
+    box-shadow: 0 4px 30px #4747470b;
+    backdrop-filter: blur(5.1px);
+    border: 3px solid rgb(222, 180, 102);
+    @apply  shrink-0 h-2/4  pt-10 pb-1 px-7 items-center justify-center flex  w-full  ;
+  }
+
+  .Toastify__toast--success {
+    background: rgb(226,171,25);
+background: linear-gradient(90deg, rgba(226,171,25,1) 0%, rgba(80,195,34,1) 12%, rgba(137,181,18,1) 80%, rgba(201,165,0,1) 100%)!important;/* Change to desired background color */
+  }
+  
+ .Toastify__toast--error {
+  background: rgb(226,171,25);
+  background: linear-gradient(90deg, rgba(226,171,25,1) 0%, rgba(209,33,33,0.9584427521008403) 32%, rgba(201,165,0,1) 100%) !important; /* Change to desired background color */
+  }
+  
+  /* Additional custom styles if needed */
+  .Toastify__toast {
+    border-radius: 8px; /* Adjust the border radius */
+    font-family: 'Arial', sans-serif; /* Adjust font family */
+  }
