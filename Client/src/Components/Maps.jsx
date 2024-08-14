@@ -17,6 +17,8 @@ const Map = () => {
         </p>
         <div className="w-full max-w-6xl ">
           <iframe
+            width={100}
+            height={100}
             src={mapSrc}
             className="w-full md:h-[34rem] h-[22rem] border-0"
             allowFullScreen

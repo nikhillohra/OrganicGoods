@@ -33,6 +33,8 @@ const WhyChooseUs = forwardRef((props, ref) => {
           <SwiperSlide>
             <div className="relative">
               <img
+                width={100}
+                height={100}
                 src="./hen.webp"
                 className="w-full md:h-[35rem] h-[25rem] rounded-xl object-cover"
                 alt="Hen"
@@ -47,6 +49,8 @@ const WhyChooseUs = forwardRef((props, ref) => {
           <SwiperSlide>
             <div className="relative">
               <img
+                width={100}
+                height={100}
                 src="./fishes.webp"
                 className="w-full  md:h-[35rem] h-[25rem] rounded-xl object-cover"
                 alt="Fishes"
@@ -61,6 +65,8 @@ const WhyChooseUs = forwardRef((props, ref) => {
           <SwiperSlide>
             <div className="relative">
               <img
+                width={100}
+                height={100}
                 src="./eggs.webp"
                 className="w-full md:h-[35rem] h-[25rem] rounded-xl object-cover"
                 alt="Eggs"

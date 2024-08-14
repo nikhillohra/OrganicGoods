@@ -1,15 +1,24 @@
-import React, { useState, useRef, useCallback, useEffect } from 'react';
-import { GiShop, GiRotaryPhone } from 'react-icons/gi';
-import { PiFarmFill } from 'react-icons/pi';
-import { FaBars, FaEmpire } from 'react-icons/fa';
-import { Link as ScrollLink } from 'react-scroll';
-import { NavLink, useLocation } from 'react-router-dom';
-import useActiveSection from './hooks/hook'; // Adjust path as necessary
+import React, {
+  useState,
+  useRef,
+  useCallback,
+  useEffect,
+  useMemo,
+} from "react";
+import { GiShop, GiRotaryPhone } from "react-icons/gi";
+import { PiFarmFill } from "react-icons/pi";
+import { FaBars, FaEmpire } from "react-icons/fa";
+import { Link as ScrollLink } from "react-scroll";
+import { NavLink, useLocation } from "react-router-dom";
+import useActiveSection from "./hooks/hook"; // Adjust path as necessary
 
 const Navbar = ({ introRef }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
   const location = useLocation();
+  const activeSection = useActiveSection(["intro", "products", "contact"]);
+
+  const isAboutPage = location.pathname === "/about";
 
   const toggleMenu = useCallback(() => {
     setIsMenuOpen((prev) => !prev);
@@ -22,34 +31,42 @@ const Navbar = ({ introRef }) => {
   }, []);
 
   useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [handleClickOutside]);
 
-  const sections = ['intro', 'products', 'contact'];
-  const activeSection = useActiveSection(sections);
-
-  const activeLinkStyle = 'text-slate-700';
-  const getLinkStyle = (section) => (section === activeSection ? activeLinkStyle : '');
-
-  const isAboutPage = location.pathname === '/about';
-
-  const scrollToTop = () => {
+  const scrollToTop = useCallback(() => {
     if (introRef.current) {
-      introRef.current.scrollIntoView({ behavior: 'smooth' });
+      introRef.current.scrollIntoView({ behavior: "smooth" });
     }
-  };
+  }, [introRef]);
+
+  const activeLinkStyle = useMemo(() => "text-slate-700", []);
+
+  const linkClass = useCallback(
+    (section) => (section === activeSection ? activeLinkStyle : ""),
+    [activeSection, activeLinkStyle]
+  );
 
   return (
     <nav className="navBg fixed top-0 z-10 w-full h-24 flex items-center justify-between shadow-md bg-white">
       <div className="flex items-center">
-      <NavLink to="/">
-        <img src="./nobbg.webp" alt="logo" className="h-24 ml-1 p-[2px] object-contain" />
+        <NavLink to="/">
+          <img
+            src="./nobbg.webp"
+            width={100}
+            height={100}
+            alt="logo"
+            className="h-24 ml-1 p-[2px] object-contain"
+          />
         </NavLink>
         <NavLink to="/">
-        <h1 className="text-2xl ml-1 font-medium text-slate-900 hidden md:flex">ORGANIC GOODS</h1></NavLink>
+          <h1 className="text-2xl ml-1 font-medium text-slate-900 hidden md:flex">
+            ORGANIC GOODS
+          </h1>
+        </NavLink>
       </div>
 
       <div className="md:hidden flex items-center pr-4 relative">
@@ -63,7 +80,11 @@ const Navbar = ({ introRef }) => {
               <li>
                 <NavLink
                   to="/"
-                  className={({ isActive }) => `flex items-center gap-1 hover:text-red-800 ${isActive ? activeLinkStyle : ''}`}
+                  className={({ isActive }) =>
+                    `flex items-center gap-1 hover:text-red-800 ${
+                      isActive ? activeLinkStyle : ""
+                    }`
+                  }
                   onClick={scrollToTop}
                 >
                   <PiFarmFill className="text-2xl" />
@@ -77,7 +98,9 @@ const Navbar = ({ introRef }) => {
                       to="products"
                       smooth={true}
                       duration={500}
-                      className={`flex items-center gap-1 hover:text-red-800 ${getLinkStyle('products')}`}
+                      className={`flex items-center gap-1 hover:text-red-800 ${linkClass(
+                        "products"
+                      )}`}
                     >
                       <GiShop className="text-lg" />
                       PRODUCTS
@@ -88,7 +111,9 @@ const Navbar = ({ introRef }) => {
                       to="contact"
                       smooth={true}
                       duration={500}
-                      className={`flex items-center gap-1 hover:text-red-800 ${getLinkStyle('contact')}`}
+                      className={`flex items-center gap-1 hover:text-red-800 ${linkClass(
+                        "contact"
+                      )}`}
                     >
                       <GiRotaryPhone className="text-2xl" />
                       CONTACT US
@@ -99,7 +124,11 @@ const Navbar = ({ introRef }) => {
               <li>
                 <NavLink
                   to="/about"
-                  className={({ isActive }) => `flex items-center gap-1  hover:text-red-800 ${isActive ? activeLinkStyle : ''}`}
+                  className={({ isActive }) =>
+                    `flex items-center gap-1 hover:text-red-800 ${
+                      isActive ? activeLinkStyle : ""
+                    }`
+                  }
                 >
                   <FaEmpire className="text-xl" />
                   ABOUT US
@@ -115,7 +144,9 @@ const Navbar = ({ introRef }) => {
           <li>
             <NavLink
               to="/"
-              className={`flex items-center gap-1 cursor-pointer hover:text-red-800 ${activeSection === 'intro' ? activeLinkStyle : ''}`}
+              className={`flex items-center gap-1 cursor-pointer hover:text-red-800 ${
+                activeSection === "intro" ? activeLinkStyle : ""
+              }`}
               onClick={scrollToTop}
             >
               <PiFarmFill className="text-2xl" />
@@ -129,7 +160,9 @@ const Navbar = ({ introRef }) => {
                   to="products"
                   smooth={true}
                   duration={500}
-                  className={`flex items-center gap-1 cursor-pointer hover:text-red-800 ${getLinkStyle('products')}`}
+                  className={`flex items-center gap-1 cursor-pointer hover:text-red-800 ${linkClass(
+                    "products"
+                  )}`}
                 >
                   <GiShop className="text-lg" />
                   PRODUCTS
@@ -140,7 +173,9 @@ const Navbar = ({ introRef }) => {
                   to="contact"
                   smooth={true}
                   duration={500}
-                  className={`flex items-center gap-1 cursor-pointer hover:text-red-800 ${getLinkStyle('contact')}`}
+                  className={`flex items-center gap-1 cursor-pointer hover:text-red-800 ${linkClass(
+                    "contact"
+                  )}`}
                 >
                   <GiRotaryPhone className="text-2xl" />
                   CONTACT US
@@ -151,7 +186,11 @@ const Navbar = ({ introRef }) => {
           <li>
             <NavLink
               to="/about"
-              className={({ isActive }) => `flex items-center gap-1 cursor-pointer hover:text-red-800 ${isActive ? activeLinkStyle : ''}`}
+              className={({ isActive }) =>
+                `flex items-center gap-1 cursor-pointer hover:text-red-800 ${
+                  isActive ? activeLinkStyle : ""
+                }`
+              }
             >
               <FaEmpire className="text-xl" />
               ABOUT US

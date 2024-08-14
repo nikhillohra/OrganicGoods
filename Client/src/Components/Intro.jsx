@@ -10,9 +10,12 @@ const Intro = forwardRef((props, ref) => {
     >
       <div className="glass flex flex-col p-1 items-center mt-20 md:mt-24">
         <img
+          width={100}
+          height={100}
           src="nobbg.webp"
           alt="logo"
           className="h-28 w-auto md:h-36 object-cover"
+          loading="eager" // Ensures the logo is loaded immediately
         />
         <div className="text-center mt-6 mb-10">
           <h1 className=" text-[rgba(209,143,0,0.92)] text-2xl md:text-3xl mb-6 font-semibold">
@@ -25,9 +28,12 @@ const Intro = forwardRef((props, ref) => {
           </p>
           <div className="flex justify-center my-3">
             <img
+              width={150}
+              height={220}
               src="fresh.webp"
               alt="Fresh produce"
-              className="h-36 mix-blend-darken"
+              className="h-36 w-36 mix-blend-darken"
+              loading="lazy" // Lazy load non-critical images
             />
           </div>
           <p className=" text-slate-800 md:text-base text-base">

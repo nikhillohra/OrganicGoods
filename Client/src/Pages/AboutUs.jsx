@@ -24,9 +24,11 @@ const AboutUs = () => {
           <div className="glassA about p-3 flex pb-10 flex-col items-center justify-center">
             <div className="items-center justify-center">
               <img
+                width={115}
+                height={115}
                 src="./nobbg.webp"
                 alt="logo"
-                className="h-[102px] ml-1 mb-10"
+                className="h-[105px] ml-1 mb-10"
               />
             </div>
             <div className="items-center justify-center bg-[#ae8d60a2] pt-5 pb-5 rounded-lg p-4">
@@ -93,7 +95,13 @@ const AboutUs = () => {
                   </div>
                 </div>
                 <div className="flex justify-center items-center mt-6">
-                  <img className="w-[12rem]" src="./vision.webp" alt="Vision" />
+                  <img
+                    width={115}
+                    height={115}
+                    className="w-[12rem]"
+                    src="./vision.webp"
+                    alt="Vision"
+                  />
                 </div>
               </div>
             </div>

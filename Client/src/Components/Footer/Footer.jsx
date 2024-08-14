@@ -13,10 +13,11 @@ const Footer = () => {
             Naturally Grown, Straight from OGs
           </span>
           <img
+            width={120}
+            height={120}
             className="mt-2 mix-blend-multiply"
             src="./nobbg.webp"
             alt="logo"
-            width={120}
           />
         </div>
 
@@ -60,7 +61,9 @@ const Footer = () => {
         </div>
 
         {/* Copyright Text */}
-        <p className="md:text-xs text-[10px] font-[400] text-gray-900">2024 © ORGANIC GOODS</p>
+        <p className="md:text-xs text-[10px] font-[400] text-gray-900">
+          2024 © ORGANIC GOODS
+        </p>
       </div>
     </section>
   );

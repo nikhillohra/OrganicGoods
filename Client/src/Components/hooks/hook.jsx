@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { scroller } from 'react-scroll';
+
 
 const useActiveSection = (sections) => {
   const [activeSection, setActiveSection] = useState('');

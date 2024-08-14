@@ -14,10 +14,10 @@ const Contact = forwardRef((props, ref) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setForm({
-      ...form,
+    setForm((prevForm) => ({
+      ...prevForm,
       [name]: value,
-    });
+    }));
   };
 
   const validateForm = () => {
@@ -88,72 +88,71 @@ const Contact = forwardRef((props, ref) => {
   };
 
   return (
-    <section ref={ref} {...props} id="contact">
+    <section ref={ref} {...props} id="contact" className="contact-section">
       <div className="contact-form-container flex items-center justify-center py-4 px-2 my-4">
-        <div className="text-start gcontact flex-wrap overflow-hidden mt-20 flex-col">
-          <div className="md:items-start md:justify-center">
-            <h1 className="text-3xl font-medium text-[#362f14] m-1 p-1">
-              GET IN TOUCH!
-            </h1>
-          </div>
-          <div className="md:flex-row flex-col">
-            <div className="flex flex-col md:flex-row w-full">
-              <form
-                ref={formRef}
-                onSubmit={handleSubmit}
-                className="contact-form flex flex-col p-4 space-y-4"
-              >
-                <label className="block">
-                  <span className="text-slate-800 font-medium md:text-base text-sm p-1">Name:</span>
-                  <input
-                    type="text"
-                    name="name"
-                    value={form.name}
-                    onChange={handleChange}
-                    placeholder="Your good name?"
-                    className="w-full py-3 px-3 md:text-base text-sm  text-slate-900 rounded-lg border border-gray-300 outline-none"
-                  />
-                </label>
-                <label className="block">
-                  <span className="text-slate-800 font-medium md:text-base text-sm p-1">Email:</span>
-                  <input
-                    type="email"
-                    name="email"
-                    value={form.email}
-                    onChange={handleChange}
-                    placeholder="Your email address?"
-                    className="w-full py-3 px-3 md:text-base text-sm text-slate-900 rounded-lg border border-gray-300 outline-none"
-                  />
-                </label>
-                <label className="block">
-                  <span className="text-slate-800 font-medium md:text-base text-sm p-1">Message:</span>
-                  <textarea
-                    rows={5}
-                    name="message"
-                    value={form.message}
-                    onChange={handleChange}
-                    placeholder="What would you like to say?"
-                    className="w-full py-3 px-3 text-slate-900 rounded-lg  border border-gray-300 outline-none md:text-base text-sm"
-                  />
-                </label>
-                <div className="flex justify-start items-center mt-4">
-                  <button
-                    className="btn py-3 px-8 rounded-xl outline-none text-white font-bold shadow-md"
-                    type="submit"
-                  >
-                    {loading ? "Sending..." : "Send"}
-                  </button>
-                </div>
-              </form>
-              <div className="flex items-center justify-center mt-5">
-                <img
-                  className="md:h-[15rem] h-[10rem] md:ml-14 z-0 mix-blend-multiply opacity-80"
-                  src="./contact3.webp"
-                  alt="Contact"
+        <div className="text-start gcontact contact-content flex-wrap mt-20">
+          <h1 className="text-3xl font-medium text-[#362f14] m-1 p-1">GET IN TOUCH!</h1>
+          
+          <div className="contact-form-wrapper justify-center items-center flex flex-col md:flex-row w-full">
+            <form
+              ref={formRef}
+              onSubmit={handleSubmit}
+              className="contact-form flex flex-col p-4 space-y-4"
+            >
+              <label className="block ">
+                <span className="text-slate-800 font-medium text-sm p-1">Name:</span>
+                <input
+                  type="text"
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
+                  placeholder="Your good name?"
+                  className="w-full py-3 px-3 text-slate-900 rounded-lg border border-gray-300 outline-none"
                 />
+              </label>
+              <label className="block">
+                <span className="text-slate-800 font-medium text-sm p-1">Email:</span>
+                <input
+                  type="email"
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  placeholder="Your email address?"
+                  className="w-full py-3 px-3 text-slate-900 rounded-lg border border-gray-300 outline-none"
+                />
+              </label>
+              <label className="block">
+                <span className="text-slate-800 font-medium text-sm p-1">Message:</span>
+                <textarea
+                  rows={5}
+                  name="message"
+                  value={form.message}
+                  onChange={handleChange}
+                  placeholder="What would you like to say?"
+                  className="w-full py-3 px-3 text-slate-900 rounded-lg border border-gray-300 outline-none"
+                />
+              </label>
+              <div className="flex justify-start items-center mt-4">
+                <button
+                  className="btn py-3 px-8 rounded-xl outline-none text-white font-bold shadow-md"
+                  type="submit"
+                >
+                  {loading ? "Sending..." : "Send"}
+                </button>
               </div>
+            </form>
+
+            <div className="flex items-center justify-center mt-5 md:ml-6 ">
+              <img
+                width={240}
+                height={100}
+                className="contact-image mix-blend-multiply opacity-80"
+                src="./contact3.webp"
+                alt="Contact"
+              />
             </div>
           </div>
+
           <ToastContainer
             position="top-right"
             autoClose={5000}
@@ -166,7 +165,8 @@ const Contact = forwardRef((props, ref) => {
             pauseOnHover
             theme="colored"
           />
-          <h2 className="md:text-lg text-sm text-[#312c2c] font-normal text-center p-1 m-2">
+
+          <h2 className="text-sm text-[#312c2c] font-normal text-center p-1 m-2">
             *We'll get back to you as soon as possible. Thank you for reaching out!
           </h2>
         </div>
