@@ -8,11 +8,11 @@ const GetInTouch = () => {
           <h1 className="text-2xl md:text-3xl font-semibold text-[rgba(209,143,0,0.96)] mb-4">
             Contact Us!
           </h1>
-          <p className="text-base md:text-lg text-center font-semibold text-[#1b1414] mb-6">
+          <p className="text-base md:text-lg text-center font-medium text-[#1b1414] mb-6">
             We love hearing from our customers and community members.
           </p>
-          <div className="bg-[#c4d1c434] py-6 px-4 m-2 rounded-lg flex items-center flex-wrap">
-            <div className="space-y-4 text-base md:text-lg text-[#1b1414] ">
+          <div className="bg-[#c4d1c434] py-4 px-5 m-2 rounded-lg flex items-center flex-wrap">
+            <div className="space-y-4 text-sm md:text-lg text-[#1b1414] ">
               <div className="flex flex-col sm:flex-row items-start sm:items-center p-1">
                 <span className="font-semibold mr-2">Address:</span>
                 <span className="break-words">
@@ -32,7 +32,7 @@ const GetInTouch = () => {
               </div>
             </div>
           </div>
-          <h2 className="text-base md:text-lg text-[#221e1e] font-normal text-center mt-6 mb-4">
+          <h2 className="text-sm md:text-base text-[#221e1e] font-normal text-center mt-6 mb-4">
             *We'll get back to you as soon as possible. Thank you for reaching
             out!
           </h2>

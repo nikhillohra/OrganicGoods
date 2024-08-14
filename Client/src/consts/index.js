@@ -37,17 +37,17 @@ export const products = [
   {
     name: "Desi Murga/Murgi (Country Chicken)",
     price: "250₹/kg",
-    image: "./hen.png",
+    image: "./hen.webp",
   },
   {
     name: "Fishes (Catla, Rohu, Pangas)",
     price: "180₹/kg",
-    image: "./fishes.png",
+    image: "./fishes.webp",
   },
   {
     name: "Desi Eggs/Brown Country Eggs",
     price: "120₹/dozen",
-    image: "./eggs.png",
+    image: "./eggs.webp",
   },
 ];
 

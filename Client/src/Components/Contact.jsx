@@ -104,36 +104,36 @@ const Contact = forwardRef((props, ref) => {
                 className="contact-form flex flex-col p-4 space-y-4"
               >
                 <label className="block">
-                  <span className="text-slate-800 font-medium">Name:</span>
+                  <span className="text-slate-800 font-medium md:text-base text-sm p-1">Name:</span>
                   <input
                     type="text"
                     name="name"
                     value={form.name}
                     onChange={handleChange}
                     placeholder="Your good name?"
-                    className="w-full py-3 px-4 text-slate-900 rounded-lg border border-gray-300 outline-none"
+                    className="w-full py-3 px-3 md:text-base text-sm  text-slate-900 rounded-lg border border-gray-300 outline-none"
                   />
                 </label>
                 <label className="block">
-                  <span className="text-slate-800 font-medium">Email:</span>
+                  <span className="text-slate-800 font-medium md:text-base text-sm p-1">Email:</span>
                   <input
                     type="email"
                     name="email"
                     value={form.email}
                     onChange={handleChange}
                     placeholder="Your email address?"
-                    className="w-full py-3 px-4 text-slate-900 rounded-lg border border-gray-300 outline-none"
+                    className="w-full py-3 px-3 md:text-base text-sm text-slate-900 rounded-lg border border-gray-300 outline-none"
                   />
                 </label>
                 <label className="block">
-                  <span className="text-slate-800 font-medium">Message:</span>
+                  <span className="text-slate-800 font-medium md:text-base text-sm p-1">Message:</span>
                   <textarea
                     rows={5}
                     name="message"
                     value={form.message}
                     onChange={handleChange}
                     placeholder="What would you like to say?"
-                    className="w-full py-3 px-4 text-slate-900 rounded-lg border border-gray-300 outline-none"
+                    className="w-full py-3 px-3 text-slate-900 rounded-lg  border border-gray-300 outline-none md:text-base text-sm"
                   />
                 </label>
                 <div className="flex justify-start items-center mt-4">
@@ -147,8 +147,8 @@ const Contact = forwardRef((props, ref) => {
               </form>
               <div className="flex items-center justify-center mt-5">
                 <img
-                  className="md:h-[15rem] h-[14rem] z-0 mix-blend-multiply opacity-80"
-                  src="./contact3.png"
+                  className="md:h-[15rem] h-[10rem] md:ml-14 z-0 mix-blend-multiply opacity-80"
+                  src="./contact3.webp"
                   alt="Contact"
                 />
               </div>
@@ -166,7 +166,7 @@ const Contact = forwardRef((props, ref) => {
             pauseOnHover
             theme="colored"
           />
-          <h2 className="text-lg text-[#312c2c] font-normal text-center p-1 m-2">
+          <h2 className="md:text-lg text-sm text-[#312c2c] font-normal text-center p-1 m-2">
             *We'll get back to you as soon as possible. Thank you for reaching out!
           </h2>
         </div>

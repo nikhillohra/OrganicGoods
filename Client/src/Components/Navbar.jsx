@@ -46,7 +46,7 @@ const Navbar = ({ introRef }) => {
     <nav className="navBg fixed top-0 z-10 w-full h-24 flex items-center justify-between shadow-md bg-white">
       <div className="flex items-center">
       <NavLink to="/">
-        <img src="./nobbg.png" alt="logo" className="h-24 ml-1 p-[2px] object-contain" />
+        <img src="./nobbg.webp" alt="logo" className="h-24 ml-1 p-[2px] object-contain" />
         </NavLink>
         <NavLink to="/">
         <h1 className="text-2xl ml-1 font-medium text-slate-900 hidden md:flex">ORGANIC GOODS</h1></NavLink>

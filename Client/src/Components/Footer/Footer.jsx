@@ -9,12 +9,12 @@ const Footer = () => {
       <div className="flex flex-col items-center">
         {/* Left Side */}
         <div className="flex flex-col items-center mb-4">
-          <span className="text-sm font-medium text-gray-900">
+          <span className="md:text-sm text-xs font-medium text-gray-900">
             Naturally Grown, Straight from OGs
           </span>
           <img
             className="mt-2 mix-blend-multiply"
-            src="./nobbg.png"
+            src="./nobbg.webp"
             alt="logo"
             width={120}
           />
@@ -22,7 +22,7 @@ const Footer = () => {
 
         {/* Navigation Links */}
         <div className="mb-4">
-          <ul className="flex gap-4 text-sm">
+          <ul className="flex gap-4 md:text-sm text-xs">
             <li>
               <NavLink to="/" className="cursor-pointer hover:text-red-800">
                 Home
@@ -60,7 +60,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright Text */}
-        <p className="text-xs text-gray-900">2024 © ORGANIC GOODS</p>
+        <p className="md:text-xs text-[10px] font-[400] text-gray-900">2024 © ORGANIC GOODS</p>
       </div>
     </section>
   );

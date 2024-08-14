@@ -1,20 +1,5 @@
-.timeline-container {
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.timeline-heading {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #d53b3b; /* Adjust as needed */
-}
-
 .timeline {
   position: relative;
-  padding: 10px 0;
   background-size: cover; /* Ensure the image covers the entire container */
   border-radius: 10px; /* Optional: Add rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
@@ -23,7 +8,6 @@
 .timeline-item {
   position: relative;
   margin-bottom: 20px;
-  padding-left: 20px;
   opacity: 1; /* Default opacity */
   transition: opacity 0.6s, transform 0.6s; /* Smooth transition for opacity and transform */
 }
@@ -34,33 +18,19 @@
   left: 0;
   width: 10px;
   height: 10px;
-  background-color: #b60b0b; /* Adjust as needed */
+  /* Adjust as needed */
   border-radius: 50%;
   top: 10px;
 }
 
 .timeline-content {
-  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
-  padding: 20px;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Semi-transparent background for readability */
+
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.timeline-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.timeline-description {
-  font-size: 1rem;
-  color: #666;
-}
-
-.timeline-date {
-  display: block;
-  margin-top: 10px;
-  font-size: 0.875rem;
-  color: #848484;
 }

@@ -6,10 +6,11 @@ const Map = () => {
   return (
     <section id="find-us" className="map-section bg-[#9e803494] p-6">
       <div className="flex flex-col items-center">
-        <h2 className="text-3xl font-semibold text-center text-[#312c2c] mb-4">
+        <h2 className="text-2xl md:text-3xl font-semibold text-center mb-4 text-[#312c2c] ">
           Find Us
         </h2>
-        <p className="text-lg font-medium text-center text-[#1b1414] mb-6">
+
+        <p className="md:text-lg text-base font-medium text-center text-[#1b1414] ">
           We invite you to visit us at our farm and see firsthand how we produce
           our organic products. Use the map below to find directions and plan
           your visit.

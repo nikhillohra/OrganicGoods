@@ -15,7 +15,7 @@ const OurValues = () => {
           <h2 className="text-4xl text-left text-slate-900 font-semibold mb-6">
             Our Values
           </h2>
-          <div className="timeline p-2 pt-6">
+          <div className="timeline  py-1">
             {memoizedTimelineItems.map((item, index) => {
               const { ref, inView } = useInView({
                 triggerOnce: true,
@@ -26,16 +26,16 @@ const OurValues = () => {
                 <motion.div
                   key={index}
                   ref={ref}
-                  className="timeline-item"
+                  className="timeline-item m-1"
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <div className="timeline-content">
-                    <h3 className="timeline-title text-xl font-semibold text-slate-800">
+                  <div className="timeline-content my-8 mx-2 p-6  text-pretty">
+                    <h3 className="text-xl font-bold mb-[10px] text-slate-800">
                       {item.title}
                     </h3>
-                    <p className="timeline-description text-lg text-slate-600">
+                    <p className="text-base md:text-lg text-slate-600">
                       {item.description}
                     </p>
                   </div>

@@ -11,12 +11,12 @@ const VerticalTimeline = forwardRef((props, ref) => {
   return (
     <>
       <section ref={ref} {...props} id="verticalTimeline">
-        <div className="flex items-center justify-center mt-10 p-1 md:p-2 md:mx-2 w-full">
+        <div className="flex items-center justify-center mt-6 p-1 md:p-2 md:mx-2 w-full">
           <div className="flex rounded-xl justify-center tlback items-center flex-col md:w-[95%] w-full p-4">
-            <h2 className="text-4xl mt-10 text-left text-slate-900 font-[600] mb-2">
+            <h2 className="text-4xl md:text-4xl mt-5 text-left text-slate-900 font-[600] mb-2">
               Our Commitment to Traditional and Organic Farming!
             </h2>
-            <div className="timeline p-1 py-6 my-2">
+            <div className="timeline  py-1 ">
               {memoizedTimelineItems.map((item, index) => {
                 const { ref, inView } = useInView({
                   triggerOnce: true,
@@ -27,15 +27,21 @@ const VerticalTimeline = forwardRef((props, ref) => {
                   <motion.div
                     key={index}
                     ref={ref}
-                    className="timeline-item m-2"
+                    className="timeline-item m-1 "
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
-                    <div className="timeline-content m-1 p-6 text-pretty">
-                      <h3 className="timeline-title ">{item.title}</h3>
-                      <p className="timeline-description">{item.description}</p>
-                      <span className="timeline-date">{item.date}</span>
+                    <div className="timeline-content my-8 mx-2 p-6  text-pretty">
+                      <h3 className="text-xl font-bold mb-[10px] text-slate-900">
+                        {item.title}
+                      </h3>
+                      <p className="text-base md:text-lg text-slate-800">
+                        {item.description}
+                      </p>
+                      <span className="block mt-4 md:text-sm text-xs text-[#706d6d]">
+                        {item.date}
+                      </span>
                     </div>
                   </motion.div>
                 );
