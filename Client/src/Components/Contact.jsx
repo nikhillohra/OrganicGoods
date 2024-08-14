@@ -73,7 +73,9 @@ const Contact = forwardRef((props, ref) => {
       .then(
         () => {
           setLoading(false);
-          toast.success("Thank you. We will get back to you as soon as possible.");
+          toast.success(
+            "Thank you. We will get back to you as soon as possible."
+          );
           setForm({
             name: "",
             email: "",
@@ -91,8 +93,10 @@ const Contact = forwardRef((props, ref) => {
     <section ref={ref} {...props} id="contact" className="contact-section">
       <div className="contact-form-container flex items-center justify-center py-4 px-2 my-4">
         <div className="text-start gcontact contact-content flex-wrap mt-20">
-          <h1 className="text-3xl font-medium text-[#362f14] m-1 p-1">GET IN TOUCH!</h1>
-          
+          <h1 className="text-3xl font-medium text-[#362f14] m-1 p-1">
+            GET IN TOUCH!
+          </h1>
+
           <div className="contact-form-wrapper justify-center items-center flex flex-col md:flex-row w-full">
             <form
               ref={formRef}
@@ -100,7 +104,9 @@ const Contact = forwardRef((props, ref) => {
               className="contact-form flex flex-col p-4 space-y-4"
             >
               <label className="block ">
-                <span className="text-slate-800 font-medium text-sm p-1">Name:</span>
+                <span className="text-slate-800 font-medium text-sm p-1">
+                  Name:
+                </span>
                 <input
                   type="text"
                   name="name"
@@ -111,7 +117,9 @@ const Contact = forwardRef((props, ref) => {
                 />
               </label>
               <label className="block">
-                <span className="text-slate-800 font-medium text-sm p-1">Email:</span>
+                <span className="text-slate-800 font-medium text-sm p-1">
+                  Email:
+                </span>
                 <input
                   type="email"
                   name="email"
@@ -122,7 +130,9 @@ const Contact = forwardRef((props, ref) => {
                 />
               </label>
               <label className="block">
-                <span className="text-slate-800 font-medium text-sm p-1">Message:</span>
+                <span className="text-slate-800 font-medium text-sm p-1">
+                  Message:
+                </span>
                 <textarea
                   rows={5}
                   name="message"
@@ -151,23 +161,24 @@ const Contact = forwardRef((props, ref) => {
                 alt="Contact"
               />
             </div>
+            <ToastContainer
+              className="max-w-[360px] p-3"
+              position="top-right"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="colored"
+            />
           </div>
 
-          <ToastContainer
-            position="top-right"
-            autoClose={5000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-            theme="colored"
-          />
-
           <h2 className="text-sm text-[#312c2c] font-normal text-center p-1 m-2">
-            *We'll get back to you as soon as possible. Thank you for reaching out!
+            *We'll get back to you as soon as possible. Thank you for reaching
+            out!
           </h2>
         </div>
       </div>
