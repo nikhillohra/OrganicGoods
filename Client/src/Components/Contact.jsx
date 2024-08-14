@@ -65,7 +65,7 @@ const Contact = forwardRef((props, ref) => {
           from_name: form.name,
           to_name: "OG",
           from_email: form.email,
-          to_email: "nikhillohra99@gmail.com",
+          to_email: "organicgoodsmp@gmail.com",
           message: form.message,
         },
         "NBNHhhziFih_ke_PR"
